@@ -1,0 +1,254 @@
+{
+  "Tags": [
+    "GLUE"
+  ],
+  "Source": "GLUE",
+  "CreatedByOtherEntities": true,
+  "Is2D": true,
+  "CustomVariables": [
+    {
+      "Properties": [
+        {
+          "Name": "Type",
+          "Value": "float",
+          "Type": "String"
+        }
+      ],
+      "Name": "X",
+      "SetByDerived": true
+    },
+    {
+      "Properties": [
+        {
+          "Name": "Type",
+          "Value": "float",
+          "Type": "String"
+        }
+      ],
+      "Name": "Y",
+      "SetByDerived": true
+    },
+    {
+      "Properties": [
+        {
+          "Name": "Type",
+          "Value": "float",
+          "Type": "String"
+        }
+      ],
+      "Name": "Z",
+      "SetByDerived": true
+    },
+    {
+      "Properties": [
+        {
+          "Name": "Type",
+          "Value": "string",
+          "Type": "String"
+        },
+        {
+          "Name": "OverridingPropertyType",
+          "Value": "int",
+          "Type": "String"
+        },
+        {
+          "Name": "TypeConverter",
+          "Value": "<default>",
+          "Type": "String"
+        },
+        {
+          "Name": "Category",
+          "Value": "Text",
+          "Type": "String"
+        }
+      ],
+      "Name": "ScoreOne",
+      "DefaultValue": 0,
+      "SetByDerived": true,
+      "SourceObject": "TeamOneScore",
+      "SourceObjectProperty": "DisplayText",
+      "Category": "Text"
+    },
+    {
+      "Properties": [
+        {
+          "Name": "Type",
+          "Value": "string",
+          "Type": "String"
+        },
+        {
+          "Name": "OverridingPropertyType",
+          "Value": "int",
+          "Type": "String"
+        },
+        {
+          "Name": "TypeConverter",
+          "Value": "<default>",
+          "Type": "String"
+        },
+        {
+          "Name": "Category",
+          "Value": "Text",
+          "Type": "String"
+        }
+      ],
+      "Name": "ScoreTwo",
+      "DefaultValue": 0,
+      "SetByDerived": true,
+      "SourceObject": "TeamTwoScore",
+      "SourceObjectProperty": "DisplayText",
+      "Category": "Text"
+    }
+  ],
+  "Properties": [
+    {
+      "Name": "InputDevice",
+      "Value": 0,
+      "Type": "int"
+    }
+  ],
+  "NamedObjects": [
+    {
+      "InstanceName": "TeamOneScore",
+      "SourceClassType": "FlatRedBall.Graphics.Text",
+      "Properties": [
+        {
+          "Name": "AssociateWithFactory",
+          "Value": true,
+          "Type": "bool"
+        }
+      ],
+      "InstructionSaves": [
+        {
+          "Type": "string",
+          "Member": "DisplayText",
+          "Value": "99",
+          "Time": 0.0
+        },
+        {
+          "Type": "float",
+          "Member": "X",
+          "Value": -150.0,
+          "Time": 0.0
+        },
+        {
+          "Type": "float",
+          "Member": "Y",
+          "Value": 270.0,
+          "Time": 0.0
+        }
+      ],
+      "SourceType": 2,
+      "SourceFile": "Text",
+      "AttachToContainer": true,
+      "GenerateTimedEmit": true
+    },
+    {
+      "InstanceName": "TeamTwoScore",
+      "SourceClassType": "FlatRedBall.Graphics.Text",
+      "Properties": [
+        {
+          "Name": "AssociateWithFactory",
+          "Value": true,
+          "Type": "bool"
+        }
+      ],
+      "InstructionSaves": [
+        {
+          "Type": "string",
+          "Member": "DisplayText",
+          "Value": "99",
+          "Time": 0.0
+        },
+        {
+          "Type": "float",
+          "Member": "X",
+          "Value": 180.0,
+          "Time": 0.0
+        },
+        {
+          "Type": "float",
+          "Member": "Y",
+          "Value": 270.0,
+          "Time": 0.0
+        }
+      ],
+      "SourceType": 2,
+      "SourceFile": "Text",
+      "AttachToContainer": true,
+      "GenerateTimedEmit": true
+    },
+    {
+      "InstanceName": "TeamOneScoreLabel",
+      "SourceClassType": "FlatRedBall.Graphics.Text",
+      "Properties": [
+        {
+          "Name": "AssociateWithFactory",
+          "Value": true,
+          "Type": "bool"
+        }
+      ],
+      "InstructionSaves": [
+        {
+          "Type": "string",
+          "Member": "DisplayText",
+          "Value": "Team 1:",
+          "Time": 0.0
+        },
+        {
+          "Type": "float",
+          "Member": "X",
+          "Value": -205.0,
+          "Time": 0.0
+        },
+        {
+          "Type": "float",
+          "Member": "Y",
+          "Value": 270.0,
+          "Time": 0.0
+        }
+      ],
+      "SourceType": 2,
+      "SourceFile": "Text",
+      "AttachToContainer": true,
+      "GenerateTimedEmit": true
+    },
+    {
+      "InstanceName": "TeamTwoScoreLabel",
+      "SourceClassType": "FlatRedBall.Graphics.Text",
+      "Properties": [
+        {
+          "Name": "AssociateWithFactory",
+          "Value": true,
+          "Type": "bool"
+        }
+      ],
+      "InstructionSaves": [
+        {
+          "Type": "string",
+          "Member": "DisplayText",
+          "Value": "Team 2:",
+          "Time": 0.0
+        },
+        {
+          "Type": "float",
+          "Member": "X",
+          "Value": 124.0,
+          "Time": 0.0
+        },
+        {
+          "Type": "float",
+          "Member": "Y",
+          "Value": 270.0,
+          "Time": 0.0
+        }
+      ],
+      "SourceType": 2,
+      "SourceFile": "Text",
+      "AttachToContainer": true,
+      "GenerateTimedEmit": true
+    }
+  ],
+  "Name": "Entities\\ScoreHUD",
+  "CustomClassesForExport": []
+}

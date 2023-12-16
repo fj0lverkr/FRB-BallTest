@@ -1,0 +1,255 @@
+{
+  "Tags": [
+    "GLUE"
+  ],
+  "Source": "GLUE",
+  "CreatedByOtherEntities": true,
+  "Is2D": true,
+  "CustomVariables": [
+    {
+      "Properties": [
+        {
+          "Name": "Type",
+          "Value": "float",
+          "Type": "String"
+        }
+      ],
+      "Name": "X",
+      "SetByDerived": true
+    },
+    {
+      "Properties": [
+        {
+          "Name": "Type",
+          "Value": "float",
+          "Type": "String"
+        }
+      ],
+      "Name": "Y",
+      "SetByDerived": true
+    },
+    {
+      "Properties": [
+        {
+          "Name": "Type",
+          "Value": "float",
+          "Type": "String"
+        }
+      ],
+      "Name": "Z",
+      "SetByDerived": true
+    },
+    {
+      "Properties": [
+        {
+          "Name": "Type",
+          "Value": "float",
+          "Type": "String"
+        }
+      ],
+      "Name": "MovementSpeed",
+      "DefaultValue": 350.0,
+      "SetByDerived": true
+    },
+    {
+      "Properties": [
+        {
+          "Name": "Type",
+          "Value": "float",
+          "Type": "String"
+        }
+      ],
+      "Name": "Drag",
+      "DefaultValue": 1.0,
+      "SetByDerived": true
+    },
+    {
+      "Properties": [
+        {
+          "Name": "Type",
+          "Value": "float",
+          "Type": "String"
+        }
+      ],
+      "Name": "DashSpeed",
+      "DefaultValue": 600.0,
+      "SetByDerived": true
+    },
+    {
+      "Properties": [
+        {
+          "Name": "Type",
+          "Value": "Color",
+          "Type": "String"
+        },
+        {
+          "Name": "Category",
+          "Value": "Appearance",
+          "Type": "String"
+        }
+      ],
+      "Name": "PlayerColor",
+      "DefaultValue": "White",
+      "SetByDerived": true,
+      "SourceObject": "CircleInstance",
+      "SourceObjectProperty": "Color",
+      "Category": "Appearance"
+    },
+    {
+      "Properties": [
+        {
+          "Name": "Type",
+          "Value": "float",
+          "Type": "String"
+        }
+      ],
+      "Name": "DashFrequency",
+      "DefaultValue": 2.0,
+      "SetByDerived": true
+    },
+    {
+      "Properties": [
+        {
+          "Name": "Type",
+          "Value": "float",
+          "Type": "String"
+        },
+        {
+          "Name": "Category",
+          "Value": "Size",
+          "Type": "String"
+        }
+      ],
+      "Name": "CooldownCircleRadius",
+      "DefaultValue": 16.0,
+      "SetByDerived": true,
+      "SourceObject": "CooldownCircle",
+      "SourceObjectProperty": "Radius",
+      "Category": "Size"
+    },
+    {
+      "Properties": [
+        {
+          "Name": "Type",
+          "Value": "Color",
+          "Type": "String"
+        },
+        {
+          "Name": "Category",
+          "Value": "Appearance",
+          "Type": "String"
+        }
+      ],
+      "Name": "CooldownCircleColor",
+      "DefaultValue": "White",
+      "SetByDerived": true,
+      "SourceObject": "CooldownCircle",
+      "SourceObjectProperty": "Color",
+      "Category": "Appearance"
+    }
+  ],
+  "Properties": [
+    {
+      "Name": "ImplementsICollidable",
+      "Value": true,
+      "Type": "bool"
+    },
+    {
+      "Name": "InputDevice",
+      "Value": 0,
+      "Type": "int"
+    }
+  ],
+  "NamedObjects": [
+    {
+      "InstanceName": "CircleInstance",
+      "SourceClassType": "FlatRedBall.Math.Geometry.Circle",
+      "Properties": [
+        {
+          "Name": "AssociateWithFactory",
+          "Value": true,
+          "Type": "bool"
+        }
+      ],
+      "InstructionSaves": [
+        {
+          "Type": "float",
+          "Member": "Radius",
+          "Value": 16.0,
+          "Time": 0.0
+        }
+      ],
+      "SourceType": 2,
+      "SourceFile": "Circle",
+      "HasPublicProperty": true,
+      "AttachToContainer": true,
+      "GenerateTimedEmit": true
+    },
+    {
+      "InstanceName": "CooldownCircle",
+      "SourceClassType": "FlatRedBall.Math.Geometry.Circle",
+      "Properties": [
+        {
+          "Name": "AssociateWithFactory",
+          "Value": true,
+          "Type": "bool"
+        }
+      ],
+      "InstructionSaves": [
+        {
+          "Type": "float",
+          "Member": "Radius",
+          "Value": 16.0,
+          "Time": 0.0
+        }
+      ],
+      "SourceType": 2,
+      "SourceFile": "Circle",
+      "HasPublicProperty": true,
+      "AttachToContainer": true,
+      "GenerateTimedEmit": true
+    }
+  ],
+  "StateCategoryList": [
+    {
+      "Name": "DashCategory",
+      "States": [
+        {
+          "Name": "Tired",
+          "InstructionSaves": [
+            {
+              "Type": "float",
+              "Member": "CooldownCircleRadius",
+              "Value": 0.0,
+              "Time": 0.0
+            }
+          ]
+        },
+        {
+          "Name": "Rested",
+          "InstructionSaves": [
+            {
+              "Type": "float",
+              "Member": "CooldownCircleRadius",
+              "Value": 16.0,
+              "Time": 0.0
+            }
+          ]
+        }
+      ],
+      "ExcludedVariables": [
+        "X",
+        "Y",
+        "Z",
+        "MovementSpeed",
+        "Drag",
+        "DashSpeed",
+        "PlayerColor",
+        "DashFrequency",
+        "CooldownCircleColor"
+      ]
+    }
+  ],
+  "Name": "Entities\\PlayerBall",
+  "CustomClassesForExport": []
+}
